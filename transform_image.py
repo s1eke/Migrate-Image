@@ -30,8 +30,8 @@ def transform_image_url(image_url):
         new_name = f"{namespace}-{name}".strip('-')
     
     # 构建新的镜像地址
-    new_domain = 'sgccr.ccs.tencentyun.com'
-    new_namespace = 'migrate'
+    new_domain = 'registry.ap-southeast-1.aliyuncs.com'
+    new_namespace = 'migrate-1'
     new_tag = tag
     
     new_image_url = f"{new_domain}/{new_namespace}/{new_name}:{new_tag}"
