@@ -1,0 +1,26 @@
+name: Migrate Docker Image
+
+  workflow_dispatch:
+    inputs:
+      image_url:
+        description: 'The source image URL to migrate'
+        required: true
+
+jobs:
+  migrate-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set Destination Image
+        id: set-dst-image
+        run: |
+          echo "DST_IMAGE=$(python main.py ${{ github.event.inputs.image_url }})" >> $GITHUB_ENV
+
+      - name: skopeo-copy-action
+        uses: coscene-io/skopeo-copy-action@v1.0.0
+        with:
+          src-image: ${{ github.event.inputs.image_url }}
+          dst-image: ${{ env.DST_IMAGE }}
+          dst-creds: ${{ secrets.DOCKERUSER }}:${{ secrets.DOCKERPASS }}
+            
