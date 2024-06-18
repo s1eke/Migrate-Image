@@ -1,5 +1,6 @@
 name: Migrate Docker Image
 
+on:
   workflow_dispatch:
     inputs:
       image_url:
