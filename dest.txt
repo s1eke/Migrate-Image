@@ -1,0 +1,1 @@
+registry.ap-southeast-1.aliyuncs.com/migrate-1
