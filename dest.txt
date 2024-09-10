@@ -1,1 +1,1 @@
-registry.ap-southeast-1.aliyuncs.com/migrate-1
+registry.cn-hongkong.aliyuncs.com/migrate-1
