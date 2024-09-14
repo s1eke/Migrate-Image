@@ -3,6 +3,8 @@
 
 ## 使用方法
 
+### Github Action
+
 首先fork该仓库，然后修改dest.txt文件，填写自己的仓库地址，然后再点击Settings，选择Secrets and variables，选择 Actions，在右侧添加DOCKERPASS和DOCKERUSER两个密钥（ps.这个用户名和密码就是dest.txt文件中填写的仓库地址对应的用户名密码）。
 
 ![QQ_1720676934865](https://github.com/s1eke/Migrate-Image/assets/10690839/d17c2f18-8d9d-4522-b6ef-d5e69864914c)
@@ -13,6 +15,10 @@
 ![QQ_1720676679095](https://github.com/s1eke/Migrate-Image/assets/10690839/78a8a051-d549-43d3-8387-c85925439a96)
 
 ![image](https://github.com/s1eke/Migrate-Image/assets/10690839/935dd508-9a83-446d-900c-bf8b084186a0)
+
+### Web UI
+
+Web UI 是上面的拓展，用 nicegui 实现的，pull 之后安装依赖，pip install nicegui,然后设置 GITHUB_TOKEN(github令牌，需要有 action 和 workflow 的访问读写权限) 和 REPO_OWNER(github name)即可。写的太烂，但是勉强能用了，先学习一波以后再回头改吧。
 
 
 ## TODO
