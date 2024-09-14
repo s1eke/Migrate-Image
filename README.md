@@ -16,4 +16,6 @@
 
 
 ## TODO
-dest.txt支持多个目标，但是还没想好是在一个job里传好所有目标合适，还是每个job传一个地址合适。
+
+1. dest.txt支持多个目标，但是还没想好是在一个job里传好所有目标合适，还是每个job传一个地址合适。
+2. 添加一个 web ui，通过 [nicegui](https://github.com/zauberzeug/nicegui) 实现。

@@ -16,7 +16,7 @@ jobs:
       - name: Set Destination Image
         id: set-dst-image
         run: |
-          echo "DST_IMAGE=$(python main.py ${{ github.event.inputs.image_url }})" >> $GITHUB_ENV
+          echo "DST_IMAGE=$(python transform_image/main.py ${{ github.event.inputs.image_url }})" >> $GITHUB_ENV
 
       - name: skopeo-copy-action-new
         uses: s1eke/skopeo-copy-action@1.0.2
